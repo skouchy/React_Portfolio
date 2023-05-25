@@ -12,11 +12,11 @@ import banana from './logo.svg';
 
 function App() {
   return (
-    // <BrowserRouter>
+    <BrowserRouter>
       <div className='parent-container'>
         <Header />
         <div id='page-content'>
-          <img src={banana} />
+          <img src={banana} alt="" />
           <Routes>
             <Route path="/contact" element={<Contact />} />
             <Route path="/resume" element={<Resume />} />
@@ -29,7 +29,7 @@ function App() {
 
 
       </div>
-    // </BrowserRouter>
+    </BrowserRouter>
   );
 }
 
