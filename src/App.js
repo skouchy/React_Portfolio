@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AboutMe from './pages/AboutMe';
@@ -12,7 +12,7 @@ import banana from './logo.svg';
 
 function App() {
   return (
-    // <BrowserRouter>
+
       <div className='parent-container'>
         <Header />
         <div id='page-content'>
@@ -29,7 +29,7 @@ function App() {
 
 
       </div>
-    // </BrowserRouter>
+
   );
 }
 
