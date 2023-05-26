@@ -12,7 +12,7 @@ import banana from './logo.svg';
 
 function App() {
   return (
-    <BrowserRouter>
+    // <BrowserRouter>
       <div className='parent-container'>
         <Header />
         <div id='page-content'>
@@ -29,7 +29,7 @@ function App() {
 
 
       </div>
-    </BrowserRouter>
+    // </BrowserRouter>
   );
 }
 
