@@ -28,14 +28,14 @@ export default function ContactForm() {
         setErrorMessage("");
       }
     }
-    if (!errorMessage) {
-      setFormState({ ...formState, [e.target.name]: e.target.value });
-      console.log(formState);
-    }
   }
-
+  
   function handleSubmit(e) {
     e.preventDefault();
+    if (!errorMessage) {
+      setFormState({ [e.target.name]: e.target.value });
+      console.log(`FORM STATE::  `, formState);
+    }
   }
 
   return (
