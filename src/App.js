@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import AboutMe from './pages/AboutMe';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
-import Projects from './pages/Projects';
+import Projects from './pages/GalleryItem';
 import banana from './logo.svg';
 
 

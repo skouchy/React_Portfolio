@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { validateEmail } from "../../utils/helpers";
+import { validateEmail } from "../utils/helpers";
+import { Email, Github, LinkedIn } from "../assets/icons";
 
 export default function ContactForm() {
   const [formState, setFormState] = useState({
@@ -29,7 +30,7 @@ export default function ContactForm() {
       }
     }
   }
-  
+
   function handleSubmit(e) {
     e.preventDefault();
     if (!errorMessage) {
@@ -39,43 +40,50 @@ export default function ContactForm() {
   }
 
   return (
-    <section>
-      <h1>Contact Me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            defaultValue={name}
-            onBlur={handleChange}
-            name="name"
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email Address:</label>
-          <input
-            type="email"
-            defaultValue={email}
-            onBlur={handleChange}
-            name="email"
-          />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            name="message"
-            defaultValue={message}
-            onBlur={handleChange}
-            rows="5"
-          />
-        </div>
-        {errorMessage && (
+    <>
+      <section>
+        <h1>Contact Me</h1>
+        <form id="contact-form" onSubmit={handleSubmit}>
           <div>
-            <p className="error-text">{errorMessage}</p>
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              defaultValue={name}
+              onBlur={handleChange}
+              name="name"
+            />
           </div>
-        )}
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+          <div>
+            <label htmlFor="email">Email Address:</label>
+            <input
+              type="email"
+              defaultValue={email}
+              onBlur={handleChange}
+              name="email"
+            />
+          </div>
+          <div>
+            <label htmlFor="message">Message:</label>
+            <textarea
+              name="message"
+              defaultValue={message}
+              onBlur={handleChange}
+              rows="5"
+            />
+          </div>
+          {errorMessage && (
+            <div>
+              <p className="error-text">{errorMessage}</p>
+            </div>
+          )}
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <div>
+        <img src={Email} alt="icon link to email" />
+        <img src={Github} alt="icon link to github" />
+        <img src={LinkedIn} alt="icon link to linkedIn" />
+      </div>
+    </>
   );
-};
+}
