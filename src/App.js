@@ -5,31 +5,22 @@ import Footer from './components/Footer';
 import AboutMe from './pages/AboutMe';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
-import Projects from './pages/GalleryItem';
-import banana from './logo.svg';
+import Gallery from './pages/Gallery';
 
 
 
 function App() {
   return (
-
-      <div className='parent-container'>
+      <div className="flex-column justify-flex-start min-100-vh">
         <Header />
-        <div id='page-content'>
-          <img src={banana} alt="" />
-          <Routes>
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="*" element={<AboutMe />} />
-          </Routes>
-
-        </div>
+        <Routes>
+          <Route path="/Gallery" Component={Gallery} />
+          <Route path="/Contact" Component={Contact} />
+          <Route path="/Resume" Component={Resume} />
+          <Route path="/" Component={AboutMe} />
+        </Routes>
         <Footer />
-
-
       </div>
-
   );
 }
 

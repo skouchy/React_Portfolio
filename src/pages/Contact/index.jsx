@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { validateEmail } from "../utils/helpers";
-import { Email, Github, LinkedIn } from "../assets/icons";
+import { validateEmail } from "../../utils/helpers";
+import { Email, Github, LinkedIn } from "../../assets/icons";
 
 export default function ContactForm() {
   const [formState, setFormState] = useState({

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./GalleryItem.css";
 
 const GalleryItem = ({ image, title }) => {
   return (
